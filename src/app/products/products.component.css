@@ -1,0 +1,26 @@
+.import-form {
+    margin-right: 10px;
+    max-width: 365px;
+    min-width: 300px;
+    float: right;
+}
+
+.import-popup {
+    width: 350px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.import-popup > * {
+    margin: 10px auto;
+}
+
+.buffer {
+    margin-top: 10px;
+}
+
+.wj-collectionview-navigator {
+    margin-bottom: 10px;
+}

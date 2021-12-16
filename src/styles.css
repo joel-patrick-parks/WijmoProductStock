@@ -1,1 +1,163 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@grapecity/wijmo.styles/themes/wijmo.theme.material.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+html {
+    background-color: hsl(186, 100%, 96%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wj-flexgrid {
+    width: 100%;
+    border: none;
+}
+  
+.wj-flexgrid .wj-cell {
+    border-left: none;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    padding:6px 16px;
+    background:#fff;
+    font-weight: 400;
+    height: 48px;
+}
+  
+.wj-flexgrid .wj-colheaders .wj-header.wj-cell {
+    height: 56px;
+    font-weight: 500;
+    font-size: 16px;
+}
+  
+.wj-flexgrid .wj-cell.wj-align-right {
+    justify-content: flex-end;
+}
+  
+.wj-flexgrid .wj-cell.wj-align-center {
+    justify-content: center;
+}
+  
+.wj-flexgrid .wj-cell input.wj-column-selector.wj-column-selector-group {
+    transform: scale(1.5);
+}
+  
+.wj-flexgrid .wj-cell label input[type=checkbox] {
+    transform: scale(1.25);
+}
+
+.large-card {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px hsl(0, 0%, 71%);
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.small-card {
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px hsl(0, 0%, 71%);
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    margin-left: 10px;
+}
+
+.quote-title {
+    margin-left: 10px;
+}
+
+.search-bar {
+    margin-left: 10px;
+}
+
+.search-icon {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.wj-btn-group {
+    float: right;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.wj-btn {
+    border: 1px solid gray;
+    border-right: none;
+    background-color: hsl(186, 100%, 95%);
+    padding: 0.5em 1em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.wj-btn.wj-single {
+    border: 1px solid gray;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: hsl(186, 100%, 95%);
+}
+
+.wj-btn-group .wj-btn:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.wj-btn-group .wj-btn:last-child {
+    border: 1px solid gray;
+    border-radius: 0 15px 15px 0;
+}
+
+.wj-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: hsl(186, 73%, 75%);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 500ms ease-in-out;
+}
+
+.wj-btn:hover::before, .wj-btn:focus::before {
+    transform: scale(1.5);
+}
+
+.wj-btn:hover, .wj-btn:focus {
+    background-color: hsl(186, 100%, 95%);
+}
+
+.icon-buffer {
+    margin-right: 3px;
+}
+
+.icon-view {
+    margin-right: 2px;
+    color: black;
+    cursor: pointer;
+}
+
+.icon-edit {
+    margin-right: 2px;
+    color: green;
+}
+
+.icon-delete {
+    cursor: pointer;
+    color: red;
+}
