@@ -1,16 +1,86 @@
-.dashboard-card {
+.dashboard-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight'
+        'nine'
+        'ten'
+        'eleven';
+    padding-block: 2rem;
+    width: 95%;
+    margin-inline: auto;
+}
+
+.dashboard-card:nth-child(1) {
+    grid-area: one;
+}
+
+.dashboard-card:nth-child(2) {
+    grid-area: two;
+}
+
+.dashboard-card:nth-child(3) {
+    grid-area: three;
+}
+
+.dashboard-card:nth-child(4) {
+    grid-area: four;
+}
+
+.dashboard-card:nth-child(5) {
+    grid-area: five;
+}
+
+.dashboard-card:nth-child(6) {
+    grid-area: six;
+}
+
+.dashboard-card:nth-child(7) {
+    grid-area: seven;
+}
+
+.dashboard-card:nth-child(8) {
+    grid-area: eight;
+}
+
+.dashboard-card:nth-child(9) {
+    grid-area: nine;
+}
+
+.dashboard-card:nth-child(10) {
+    grid-area: ten;
+}
+
+.dashboard-card:nth-child(11) {
+    grid-area: eleven;
+}
+
+.value-cards {
     width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px hsl(0, 0%, 71%);
-    background-color: white;
-    margin: auto;
+    height: 75px;
+}
+
+.value-card-info {
+    padding: 0.5rem;
 }
 
 .value-card {
     height: 75px;
     display: flex;
     text-align: center;
+    width: 100%;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 2px hsl(0, 0%, 71%);
+    background-color: white;
+    margin: auto;
 }
 
 .value-card-left {
@@ -27,6 +97,7 @@
 
 .value-card-icon {
     font-size: 40px;
+    color: hsl(187, 100%, 42%)
 }
 
 .value-card-title {
@@ -37,9 +108,21 @@
     font-size: 24px;
 }
 
+.wijmo-card-info-left {
+    padding: 1rem 0.5rem 1rem 1rem;
+}
+
+.wijmo-card-info-right {
+    padding: 1rem 1rem 1rem 0rem;
+}
+
 .wijmo-card {
     height: 300px;
     text-align: center;
+    width: 100%;
+    box-shadow: 2px 2px 2px 2px hsl(0, 0%, 71%);
+    background-color: white;
+    margin: auto;
 }
 
 .wijmo-card-title {
@@ -50,19 +133,31 @@
     border-bottom: 1px solid gray;
 }
 
-.wj-flexgrid {
-    max-height: 250px;
-}
-
 .wj-flexchart {
     height: 100%;
     border: none;
 }
 
-.buffer {
-    margin-top: 20px;
+@media (min-width: 900px) {
+    .dashboard-grid {
+        grid-template-areas: 
+            'one two'
+            'three four'
+            'five five'
+            'six eight'
+            'seven seven'
+            'nine ten'
+            'eleven eleven';
+    }
 }
 
-.buffer-bottom {
-    margin-bottom: 20px;
+@media (min-width: 1500px) {
+    .dashboard-grid {
+        grid-template-areas: 
+            'one two three four'
+            'five five five six'
+            'seven seven seven eight'
+            'nine nine nine ten'
+            'eleven eleven eleven eleven';
+    }
 }

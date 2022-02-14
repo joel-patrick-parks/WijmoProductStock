@@ -12,11 +12,11 @@ export class TransferService {
       reference: 'TR_1111',
       fromWarehouse: 'Warehouse 2',
       toWarehouse: 'Warehouse 1',
-      items: '6',
-      grandTotal: 13000,
+      items: '10',
+      grandTotal: 15000,
       status: 'Completed',
       details: [
-        { product: 'Macbook Pro', code: Math.round(Math.random() * 100000000), quantity: 10.00, subtotal: 13000 }
+        { product: 'Macbook Pro', code: Math.round(Math.random() * 100000000), quantity: 10.00, subtotal: 15000 }
       ]
     },
     {
@@ -25,7 +25,7 @@ export class TransferService {
       reference: 'TR_1112',
       fromWarehouse: 'Warehouse 1',
       toWarehouse: 'Warehouse 2',
-      items: '1',
+      items: '2',
       grandTotal: 52,
       status: 'Completed',
       details: [
@@ -39,7 +39,7 @@ export class TransferService {
       reference: 'TR_1113',
       fromWarehouse: 'Warehouse 1',
       toWarehouse: 'Warehouse 2',
-      items: '8',
+      items: '31',
       grandTotal: 568,
       status: 'Completed',
       details: [
@@ -53,7 +53,7 @@ export class TransferService {
       reference: 'TR_1114',
       fromWarehouse: 'Warehouse 2',
       toWarehouse: 'Warehouse 1',
-      items: '3',
+      items: '45',
       grandTotal: 860,
       status: 'Incomplete',
       details: [
@@ -68,7 +68,7 @@ export class TransferService {
       reference: 'TR_1115',
       fromWarehouse: 'Warehouse 2',
       toWarehouse: 'Warehouse 1',
-      items: '5',
+      items: '67',
       grandTotal: 783,
       status: 'Completed',
       details: [
@@ -90,7 +90,14 @@ export class TransferService {
   }
 
   saveTransfer(val: number, items: []) {
+    var newTotal = 0, newItems = 0;
     this.transferList[val-1].details = items;
+    for(var i = 0; i < this.transferList[val-1].details.length; i++) {
+      newTotal += this.transferList[val-1].details[i].subtotal;
+      newItems += this.transferList[val-1].details[i].quantity;
+    }
+    this.transferList[val-1].grandTotal = newTotal;
+    this.transferList[val-1].items = newItems.toString();
   }
 
   deleteTransfer(val: number) {

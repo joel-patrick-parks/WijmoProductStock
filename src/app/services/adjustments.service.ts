@@ -72,6 +72,7 @@ export class AdjustmentsService {
 
   saveAdjustment(val: number, items: []) {
     this.adjustmentList[val-1].details = items;
+    this.adjustmentList[val-1].totalProducts = items.length.toString();
   }
 
   deleteAdjustment(val: number) {

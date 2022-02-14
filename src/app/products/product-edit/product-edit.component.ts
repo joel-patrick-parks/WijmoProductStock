@@ -22,6 +22,8 @@ export class ProductEditComponent implements OnInit {
   @ViewChild('purchaseUnit') purchaseUnit: wjInput.ComboBox;
   @ViewChild('stockAlert') stockAlert: wjInput.InputNumber;
   @ViewChild('tax') tax: wjInput.InputNumber;
+  @ViewChild('warehouseOne') warehouseOne: wjInput.InputNumber;
+  @ViewChild('warehouseTwo') warehouseTwo: wjInput.InputNumber;
   @ViewChild('taxTypeSelection') taxTypeSelection: wjInput.ComboBox;
   
   routeId: any;
@@ -59,9 +61,10 @@ export class ProductEditComponent implements OnInit {
       purchaseUnit: this.purchaseUnit.selectedValue,
       stockAlert: this.stockAlert.value,
       tax: this.tax.value,
+      quantity: this.warehouseOne.value + this.warehouseTwo.value,
       taxType: this.taxTypeSelection.selectedValue,
-      warehouseOne: Math.round(Math.random() * 10),
-      warehouseTwo: Math.round(Math.random() * 10),
+      warehouseOne: this.warehouseOne.value,
+      warehouseTwo: this.warehouseTwo.value,
     };
     this.productsServive.updateProduct(this.routeId, updateProduct);
     this.router.navigate(['products']);

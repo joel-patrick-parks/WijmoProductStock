@@ -64,6 +64,14 @@
         </div>
         <div class="row content-row">
             <div class="col-4">
+                Warehouse One Quantity<br>
+                <wj-input-number #warehouseOne id="warehouseOne" [value]="product.warehouseOne" class="wj-input-item" [format]="'g'"></wj-input-number>
+            </div>
+            <div class="col-4">
+                Warehouse Two Quantity<br>
+                <wj-input-number #warehouseTwo id="warehouseTwo" [value]="product.warehouseTwo" class="wj-input-item" [format]="'g'"></wj-input-number>
+            </div>
+            <div class="col-4">
                 Tax Type<br>
                 <wj-combo-box #taxTypeSelection id="taxType" [itemsSource]="taxType" [selectedValue]="product.taxType" class="wj-input-item"></wj-combo-box>
             </div>

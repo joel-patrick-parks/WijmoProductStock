@@ -27,7 +27,7 @@ export class TransferEditComponent implements OnInit {
   // Saves data and routes back to adjustment page
   save() {
     this.transfersService.saveTransfer(this.routeId, this.transferEditList.sourceCollection);
-    this.router.navigate(['adjustment']);
+    this.router.navigate(['transfer']);
   }
 
   // Deletes row from transfer table

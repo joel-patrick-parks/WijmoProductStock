@@ -3,7 +3,7 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 html {
-    background-color: hsl(186, 100%, 96%);
+    background-color: white;
 }
 
 body {
@@ -49,23 +49,32 @@ body {
     transform: scale(1.25);
 }
 
+.wj-cells .wj-cell.wj-state-selected {
+    background: #5195c4;
+}
+
+.wj-cells .wj-cell.wj-state-multi-selected {
+    background: #82c9e0;
+    color: black;
+}
+
 .large-card {
     width: 100%;
     padding: 5px;
-    border-radius: 5px;
     box-shadow: 2px 2px 2px 2px hsl(0, 0%, 71%);
     background-color: white;
     margin-bottom: 20px;
+    margin-top: 2.5rem;
 }
 
 .small-card {
     width: 80%;
     padding: 5px;
-    border-radius: 5px;
     box-shadow: 2px 2px 2px 2px hsl(0, 0%, 71%);
     background-color: white;
     margin: auto;
     margin-bottom: 20px;
+    margin-top: 2.5rem;
 }
 
 .card-title {
@@ -95,7 +104,7 @@ body {
 .wj-btn {
     border: 1px solid gray;
     border-right: none;
-    background-color: hsl(186, 100%, 95%);
+    background-color: hsl(195, 60%, 69%);
     padding: 0.5em 1em;
     position: relative;
     overflow: hidden;
@@ -107,7 +116,7 @@ body {
     float: right;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: hsl(186, 100%, 95%);
+    background-color: hsl(195, 60%, 69%);
 }
 
 .wj-btn-group .wj-btn:first-child {
@@ -117,29 +126,6 @@ body {
 .wj-btn-group .wj-btn:last-child {
     border: 1px solid gray;
     border-radius: 0 15px 15px 0;
-}
-
-.wj-btn:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    z-index: -1;
-    background-color: hsl(186, 73%, 75%);
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform 500ms ease-in-out;
-}
-
-.wj-btn:hover::before, .wj-btn:focus::before {
-    transform: scale(1.5);
-}
-
-.wj-btn:hover, .wj-btn:focus {
-    background-color: hsl(186, 100%, 95%);
 }
 
 .icon-buffer {

@@ -38,12 +38,20 @@ export class DashboardComponent implements OnInit {
   }
 
   weeklyChartInit(weeklyChart: wjChart.FlexChart) {
-    weeklyChart.palette = wjChart.Palettes.modern;
+    weeklyChart.palette = ['#4eb3d3', '#0868ac'];
     weeklyChart.axisX.labelAngle = -45;
   }
 
   topProductsInit(topProductChart: wjChart.FlexPie) {
-    topProductChart.palette = wjChart.Palettes.coral;
+    topProductChart.palette = ['#a8ddb5', '#7bccc4', '#4eb3d3', '#2b8cbe', '#0868ac'];
+  }
+
+  topCustomersInit(topCustomerChart: wjChart.FlexPie) {
+    topCustomerChart.palette = ['#a8ddb5', '#7bccc4', '#4eb3d3', '#2b8cbe', '#0868ac'];
+  }
+
+  paymentsInit(paymentsChart: wjChart.FlexChart) {
+    paymentsChart.palette = ['#4eb3d3', '#0868ac'];
   }
 
 }

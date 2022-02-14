@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ExpensesService {
   currentDate = new Date();
   expenseList = [
-    { id: 1, date: new Date(this.currentDate.setDate(this.currentDate.getDate() - this.currentDate.getDay() + 1)).toDateString().slice(4), reference: 'EXP_1111', details: 'Pertol', amount: 50, category: 'Petrol', warehouse: 'Warehouse 1' },
+    { id: 1, date: new Date(this.currentDate.setDate(this.currentDate.getDate() - this.currentDate.getDay() + 1)).toDateString().slice(4), reference: 'EXP_1111', details: 'Petrol', amount: 50, category: 'Petrol', warehouse: 'Warehouse 1' },
     { id: 2, date: new Date(this.currentDate.setDate(this.currentDate.getDate() - this.currentDate.getDay() + 2)).toDateString().slice(4), reference: 'EXP_1112', details: 'Office Supplies', category: 'Office Expenses & Postage', amount: 200, warehouse: 'Warehouse 1' },
     { id: 3, date: new Date(this.currentDate.setDate(this.currentDate.getDate() - this.currentDate.getDay() + 3)).toDateString().slice(4), reference: 'EXP_1113', details: 'Petrol', category: 'Petrol', amount: 100, warehouse: 'Warehouse 2' },
   ];
